@@ -1,22 +1,18 @@
 import Sidebar from "@/components/layout/Sidebar";
+import Navbar from "@/components/layout/Navbar";
 
 export default function Dashboard() {
   return (
     <div className="flex min-h-screen bg-black">
 
-      {/* Sidebar Component */}
+      {/* Sidebar */}
       <Sidebar />
 
-      {/* Main Content Area */}
+      {/* Main Content */}
       <div className="flex-1 flex flex-col">
 
-        {/* Navbar */}
-        <div className="h-16 bg-gray-900 border-b border-gray-800 flex items-center justify-between px-8">
-          <h2 className="text-white font-semibold text-lg">Dashboard</h2>
-          <div className="w-9 h-9 rounded-full bg-cyan-500 flex items-center justify-center text-black font-bold text-sm">
-            V
-          </div>
-        </div>
+        {/* Navbar Component */}
+        <Navbar pageName="Dashboard" />
 
         {/* Page Content */}
         <div className="flex-1 p-8">
