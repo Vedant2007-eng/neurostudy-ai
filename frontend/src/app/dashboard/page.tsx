@@ -1,31 +1,11 @@
- export default function Dashboard() {
+import Sidebar from "@/components/layout/Sidebar";
+
+export default function Dashboard() {
   return (
     <div className="flex min-h-screen bg-black">
 
-      {/* Sidebar */}
-      <div className="w-64 bg-gray-900 border-r border-gray-800 flex flex-col p-6">
-        <div className="mb-10">
-          <h1 className="text-xl font-bold text-cyan-400">🧠 NeuroStudy AI</h1>
-          <p className="text-gray-500 text-xs mt-1">Multi-Agent Study System</p>
-        </div>
-        <nav className="flex flex-col gap-3">
-          <a href="/notes" className="text-gray-300 hover:text-cyan-400 hover:bg-gray-800 px-3 py-2 rounded-lg transition">
-            📄 Notes Agent
-          </a>
-          <a href="/quiz" className="text-gray-300 hover:text-cyan-400 hover:bg-gray-800 px-3 py-2 rounded-lg transition">
-            🧠 Quiz Agent
-          </a>
-          <a href="/planner" className="text-gray-300 hover:text-cyan-400 hover:bg-gray-800 px-3 py-2 rounded-lg transition">
-            📅 Planner Agent
-          </a>
-          <a href="/doubt" className="text-gray-300 hover:text-cyan-400 hover:bg-gray-800 px-3 py-2 rounded-lg transition">
-            🤖 Doubt Agent
-          </a>
-          <a href="/revision" className="text-gray-300 hover:text-cyan-400 hover:bg-gray-800 px-3 py-2 rounded-lg transition">
-            🔔 Revision Agent
-          </a>
-        </nav>
-      </div>
+      {/* Sidebar Component */}
+      <Sidebar />
 
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col">
