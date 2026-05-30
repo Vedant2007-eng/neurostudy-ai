@@ -16,10 +16,11 @@ export default function LoginPage() {
     }
   }, [user, loading, router]);
 
-  const handleGoogleLogin = async () => {
+ const handleGoogleLogin = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
-      router.push("/dashboard");
+      document.cookie = "auth-token=true; path=/; max-age=86400";
+      window.location.href = "/dashboard";
     } catch (error) {
       console.error("Login failed:", error);
     }
