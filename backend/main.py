@@ -1,6 +1,7 @@
+from routers import notes
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from services.mongo import ping_db
+from services.mongo_service import ping_db
 from routers import upload, agents, chat, user
 
 app = FastAPI(
@@ -23,6 +24,7 @@ async def startup_event():
     print("NeuroStudy AI backend started!")
 
 app.include_router(upload.router)
+app.include_router(notes.router, prefix="/api")
 app.include_router(agents.router)
 app.include_router(chat.router)
 app.include_router(user.router)

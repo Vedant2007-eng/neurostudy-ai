@@ -1,6 +1,6 @@
 from fastapi import APIRouter, UploadFile, File, HTTPException
 from services.pdf_parser import extract_text_from_pdf
-from services.mongo import documents_collection
+from services.mongo_service import documents_collection
 from datetime import datetime
 
 router = APIRouter()

@@ -1,15 +1,15 @@
- "use client";
+"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navItems = [
   { href: "/dashboard", label: "Dashboard", icon: "🏠" },
-  { href: "/notes", label: "Notes Agent", icon: "📄" },
-  { href: "/quiz", label: "Quiz Agent", icon: "🧠" },
-  { href: "/planner", label: "Planner Agent", icon: "📅" },
-  { href: "/doubt", label: "Doubt Agent", icon: "🤖" },
-  { href: "/revision", label: "Revision Agent", icon: "🔔" },
+  { href: "/dashboard/notes", label: "Notes Agent", icon: "📄" },
+  { href: "/dashboard/quiz", label: "Quiz Agent", icon: "🧠" },
+  { href: "/dashboard/planner", label: "Planner Agent", icon: "📅" },
+  { href: "/dashboard/doubt", label: "Doubt Agent", icon: "🤖" },
+  { href: "/dashboard/revision", label: "Revision Agent", icon: "🔔" },
 ];
 
 export default function Sidebar() {
